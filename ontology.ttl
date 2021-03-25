@@ -1,0 +1,311 @@
+@prefix : <https://www.w3.org/ns/plead#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://www.w3.org/ns/plead> .
+
+<https://www.w3.org/ns/plead> rdf:type owl:Ontology ;
+                               owl:versionIRI <https://www.w3.org/ns/plead> ;
+                               rdfs:comment """Vocablary used by the Explanation tool in PLEAD
+
+A visualised Image of Vocablary
+![Plead](Plead.png)""" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#resource
+rdf:resource rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+rdf:type rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://www.w3.org/ns/plead#AcceptanceDecision
+:AcceptanceDecision rdf:type owl:Class ;
+                    rdfs:subClassOf :DecisionResult ;
+                    rdfs:comment "A positive resolution reached after consideration." ;
+                    rdfs:isDefinedBy : ;
+                    rdfs:label "Acceptance Decision" .
+
+
+###  https://www.w3.org/ns/plead#ActivityType
+:ActivityType rdf:type owl:Class ;
+              rdfs:comment """The type of process done to reach resolution reached after consideration.
+
+This class is subclass to 
+**prov:** 
+            [prov:Activity](http://www.w3.org/ns/prov#Activity)"""@en ;
+              rdfs:isDefinedBy : ;
+              rdfs:label "Activity Type" .
+
+
+###  https://www.w3.org/ns/plead#AmendingData
+:AmendingData rdf:type owl:Class ;
+              rdfs:subClassOf :DataActivity ;
+              rdfs:comment "make changes to data in order to make it more accurate." ;
+              rdfs:isDefinedBy : ;
+              rdfs:label "Amending Data" .
+
+
+###  https://www.w3.org/ns/plead#AutomatedDecision
+:AutomatedDecision rdf:type owl:Class ;
+                   rdfs:subClassOf :DecisionType ;
+                   owl:disjointWith :HumanDecision ;
+                   rdfs:comment "A resolution reached after an automated consideration." ;
+                   rdfs:isDefinedBy : ;
+                   rdfs:label "Automated Decision" .
+
+
+###  https://www.w3.org/ns/plead#Data
+:Data rdf:type owl:Class ;
+      rdfs:comment """The data holded on data subject by the current organisation. 
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)
+
+This class is equivalent to 
+**gdpr:** 
+       [Data](https://w3id.org/GDPRtEXT#Data)""" ;
+      rdfs:isDefinedBy : ;
+      rdfs:label "Data" .
+
+
+###  https://www.w3.org/ns/plead#DataActivity
+:DataActivity rdf:type owl:Class ;
+              rdfs:comment """The type of processes that can by done on data.
+
+This class is subclass to 
+**prov:** 
+            [prov:Activity](http://www.w3.org/ns/prov#Activity)""" ;
+              rdfs:isDefinedBy : ;
+              rdfs:label "Data Activity" .
+
+
+###  https://www.w3.org/ns/plead#DataController
+:DataController rdf:type owl:Class ;
+                rdfs:comment """The organisation that controls personal data.
+
+This class is subclass to 
+**prov:** 
+            [prov:Organization](http://www.w3.org/ns/prov#Organization)
+
+This class is equivalent to 
+**gdpr:** 
+            [Controller](https://w3id.org/GDPRtEXT#Controller)""" ;
+                rdfs:isDefinedBy : ;
+                rdfs:label "Data Controller" .
+
+
+###  https://www.w3.org/ns/plead#DataErasureRequest
+:DataErasureRequest rdf:type owl:Class ;
+                    rdfs:subClassOf :Requests ;
+                    rdfs:comment "The request to remove data." ;
+                    rdfs:isDefinedBy : ;
+                    rdfs:label "Data Erasure Request" .
+
+
+###  https://www.w3.org/ns/plead#DataObjectionRequest
+:DataObjectionRequest rdf:type owl:Class ;
+                      rdfs:subClassOf :Requests ;
+                      rdfs:comment "The request to citing a reason against procedure" ;
+                      rdfs:isDefinedBy : ;
+                      rdfs:label "Data Objection Request" .
+
+
+###  https://www.w3.org/ns/plead#DataRectificationRequest
+:DataRectificationRequest rdf:type owl:Class ;
+                          rdfs:subClassOf :Requests ;
+                          rdfs:comment "The request to putting something right." ;
+                          rdfs:isDefinedBy : ;
+                          rdfs:label "Data Rectify Request" .
+
+
+###  https://www.w3.org/ns/plead#DataRestrictionRequest
+:DataRestrictionRequest rdf:type owl:Class ;
+                        rdfs:subClassOf :Requests ;
+                        rdfs:comment "The request of restricting the data acesss" ;
+                        rdfs:isDefinedBy : ;
+                        rdfs:label "Data Restrict Request" .
+
+
+###  https://www.w3.org/ns/plead#DataReviewRequest
+:DataReviewRequest rdf:type owl:Class ;
+                   rdfs:subClassOf :Requests ;
+                   rdfs:comment "The request to assessing a procedure formally with the intention of instituting change if necessary." ;
+                   rdfs:isDefinedBy : ;
+                   rdfs:label "Data Review Request" .
+
+
+###  https://www.w3.org/ns/plead#DataSubject
+:DataSubject rdf:type owl:Class ;
+             rdfs:comment """The data subject is the person with data at the current organisation.
+
+This class is subclass to 
+**prov:** 
+            [prov:Agent](http://www.w3.org/ns/prov#Agent)
+
+This class is equivalent to 
+**gdpr:** 
+            [DataSubject](https://w3id.org/GDPRtEXT#DataSubject)""" ;
+             rdfs:isDefinedBy : ;
+             rdfs:label "Data Subject" .
+
+
+###  https://www.w3.org/ns/plead#DecisionResult
+:DecisionResult rdf:type owl:Class ;
+                rdfs:comment """A resolution reached after consideration.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)""" ;
+                rdfs:isDefinedBy : ;
+                rdfs:label "Decision Result" .
+
+
+###  https://www.w3.org/ns/plead#DecisionType
+:DecisionType rdf:type owl:Class ;
+              rdfs:comment """The type of process done to reach resolution reached after consideration.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)""" ;
+              rdfs:isDefinedBy : ;
+              rdfs:label "Decision Type" .
+
+
+###  https://www.w3.org/ns/plead#ErasingData
+:ErasingData rdf:type owl:Class ;
+             rdfs:subClassOf :DataActivity ;
+             rdfs:comment """The process of removing data attributes.
+
+This class is equivalent to 
+**gdpr:** 
+            [EraseData](https://w3id.org/GDPRtEXT#EraseData)""" ;
+             rdfs:isDefinedBy : ;
+             rdfs:label "Erasing" .
+
+
+###  https://www.w3.org/ns/plead#HumanDecision
+:HumanDecision rdf:type owl:Class ;
+               rdfs:subClassOf :DecisionType ;
+               rdfs:comment "A resolution reached after a human consideration." ;
+               rdfs:isDefinedBy : ;
+               rdfs:label "Human Decision" .
+
+
+###  https://www.w3.org/ns/plead#HumanLedActivity
+:HumanLedActivity rdf:type owl:Class ;
+                  rdfs:subClassOf :ActivityType ;
+                  rdfs:comment "An activity that is done by intervention of human." ;
+                  rdfs:isDefinedBy : ;
+                  rdfs:label "Human Led Activity" .
+
+
+###  https://www.w3.org/ns/plead#MachineLedActivity
+:MachineLedActivity rdf:type owl:Class ;
+                    rdfs:subClassOf :ActivityType ;
+                    rdfs:comment """An activity that is done using an automated process.
+
+This class is equivalent to 
+**gdpr:** 
+       [AutomatedProcessing](https://w3id.org/GDPRtEXT#AutomatedProcessing)""" ;
+                    rdfs:isDefinedBy : ;
+                    rdfs:label "Machine Led Activity" .
+
+
+###  https://www.w3.org/ns/plead#ObjectingData
+:ObjectingData rdf:type owl:Class ;
+               rdfs:subClassOf :DataActivity ;
+               rdfs:comment "Citing a reason against procedure." ;
+               rdfs:isDefinedBy : ;
+               rdfs:label "Objecting" .
+
+
+###  https://www.w3.org/ns/plead#PrivacyNotice
+:PrivacyNotice rdf:type owl:Class ;
+               rdfs:comment """Document that tells you what to expect us to do with your personal information when you make contact with us or use one of our services.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)""" ;
+               rdfs:isDefinedBy : ;
+               rdfs:label "Privacy Notice" .
+
+
+###  https://www.w3.org/ns/plead#ProcessingData
+:ProcessingData rdf:type owl:Class ;
+                rdfs:subClassOf :DataActivity ;
+                rdfs:comment "Dealing with data/request using an official procedure." ;
+                rdfs:isDefinedBy : ;
+                rdfs:label "Processing" .
+
+
+###  https://www.w3.org/ns/plead#RectifyingData
+:RectifyingData rdf:type owl:Class ;
+                rdfs:subClassOf :DataActivity ;
+                rdfs:comment """The process of update/fix data attributes.
+
+This class is equivalent to 
+**gdpr:** 
+            [RectifyData](https://w3id.org/GDPRtEXT#RectifyData)""" ;
+                rdfs:isDefinedBy : ;
+                rdfs:label "Rectifying" .
+
+
+###  https://www.w3.org/ns/plead#RejectionDecision
+:RejectionDecision rdf:type owl:Class ;
+                   rdfs:subClassOf :DecisionResult ;
+                   rdfs:comment "A negative resolution reached after consideration." ;
+                   rdfs:isDefinedBy : ;
+                   rdfs:label "Rejection Decision" .
+
+
+###  https://www.w3.org/ns/plead#Requests
+:Requests rdf:type owl:Class ;
+          rdfs:comment """A request for process on the data.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)""" ;
+          rdfs:isDefinedBy : ;
+          rdfs:label "Requests" .
+
+
+###  https://www.w3.org/ns/plead#RestrictingData
+:RestrictingData rdf:type owl:Class ;
+                 rdfs:subClassOf :DataActivity ;
+                 rdfs:comment "The process of restricting the data acesss." ;
+                 rdfs:isDefinedBy : ;
+                 rdfs:label "Restricting" .
+
+
+###  https://www.w3.org/ns/plead#RetentionPeriod
+:RetentionPeriod rdf:type owl:Class ;
+                 rdfs:comment """The amount of time the continued possession of the document.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)""" ;
+                 rdfs:isDefinedBy : ;
+                 rdfs:label "Retention Period" .
+
+
+###  https://www.w3.org/ns/plead#ReviewingData
+:ReviewingData rdf:type owl:Class ;
+               rdfs:subClassOf :DataActivity ;
+               rdfs:comment "Assessing a procedure formally with the intention of instituting change if necessary." ;
+               rdfs:isDefinedBy : ;
+               rdfs:label "Reviewing" .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

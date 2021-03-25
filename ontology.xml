@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.w3.org/ns/plead#"
+     xml:base="https://www.w3.org/ns/plead"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://www.w3.org/ns/plead">
+        <owl:versionIRI rdf:resource="https://www.w3.org/ns/plead"/>
+        <rdfs:comment>Vocablary used by the Explanation tool in PLEAD
+
+A visualised Image of Vocablary
+![Plead](Plead.png)</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#resource -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#resource"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.w3.org/ns/plead#AcceptanceDecision -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#AcceptanceDecision">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DecisionResult"/>
+        <rdfs:comment>A positive resolution reached after consideration.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Acceptance Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#ActivityType -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#ActivityType">
+        <rdfs:comment xml:lang="en">The type of process done to reach resolution reached after consideration.
+
+This class is subclass to 
+**prov:** 
+            [prov:Activity](http://www.w3.org/ns/prov#Activity)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Activity Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#AmendingData -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#AmendingData">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DataActivity"/>
+        <rdfs:comment>make changes to data in order to make it more accurate.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Amending Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#AutomatedDecision -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#AutomatedDecision">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DecisionType"/>
+        <owl:disjointWith rdf:resource="https://www.w3.org/ns/plead#HumanDecision"/>
+        <rdfs:comment>A resolution reached after an automated consideration.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Automated Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#Data -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#Data">
+        <rdfs:comment>The data holded on data subject by the current organisation. 
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)
+
+This class is equivalent to 
+**gdpr:** 
+       [Data](https://w3id.org/GDPRtEXT#Data)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#DataActivity -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#DataActivity">
+        <rdfs:comment>The type of processes that can by done on data.
+
+This class is subclass to 
+**prov:** 
+            [prov:Activity](http://www.w3.org/ns/prov#Activity)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Data Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#DataController -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#DataController">
+        <rdfs:comment>The organisation that controls personal data.
+
+This class is subclass to 
+**prov:** 
+            [prov:Organization](http://www.w3.org/ns/prov#Organization)
+
+This class is equivalent to 
+**gdpr:** 
+            [Controller](https://w3id.org/GDPRtEXT#Controller)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Data Controller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#DataErasureRequest -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#DataErasureRequest">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#Requests"/>
+        <rdfs:comment>The request to remove data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Data Erasure Request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#DataObjectionRequest -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#DataObjectionRequest">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#Requests"/>
+        <rdfs:comment>The request to citing a reason against procedure</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Data Objection Request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#DataRectificationRequest -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#DataRectificationRequest">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#Requests"/>
+        <rdfs:comment>The request to putting something right.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Data Rectify Request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#DataRestrictionRequest -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#DataRestrictionRequest">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#Requests"/>
+        <rdfs:comment>The request of restricting the data acesss</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Data Restrict Request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#DataReviewRequest -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#DataReviewRequest">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#Requests"/>
+        <rdfs:comment>The request to assessing a procedure formally with the intention of instituting change if necessary.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Data Review Request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#DataSubject -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#DataSubject">
+        <rdfs:comment>The data subject is the person with data at the current organisation.
+
+This class is subclass to 
+**prov:** 
+            [prov:Agent](http://www.w3.org/ns/prov#Agent)
+
+This class is equivalent to 
+**gdpr:** 
+            [DataSubject](https://w3id.org/GDPRtEXT#DataSubject)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Data Subject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#DecisionResult -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#DecisionResult">
+        <rdfs:comment>A resolution reached after consideration.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Decision Result</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#DecisionType -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#DecisionType">
+        <rdfs:comment>The type of process done to reach resolution reached after consideration.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Decision Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#ErasingData -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#ErasingData">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DataActivity"/>
+        <rdfs:comment>The process of removing data attributes.
+
+This class is equivalent to 
+**gdpr:** 
+            [EraseData](https://w3id.org/GDPRtEXT#EraseData)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Erasing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#HumanDecision -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#HumanDecision">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DecisionType"/>
+        <rdfs:comment>A resolution reached after a human consideration.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Human Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#HumanLedActivity -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#HumanLedActivity">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#ActivityType"/>
+        <rdfs:comment>An activity that is done by intervention of human.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Human Led Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#MachineLedActivity -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#MachineLedActivity">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#ActivityType"/>
+        <rdfs:comment>An activity that is done using an automated process.
+
+This class is equivalent to 
+**gdpr:** 
+       [AutomatedProcessing](https://w3id.org/GDPRtEXT#AutomatedProcessing)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Machine Led Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#ObjectingData -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#ObjectingData">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DataActivity"/>
+        <rdfs:comment>Citing a reason against procedure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Objecting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#PrivacyNotice -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#PrivacyNotice">
+        <rdfs:comment>Document that tells you what to expect us to do with your personal information when you make contact with us or use one of our services.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Privacy Notice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#ProcessingData -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#ProcessingData">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DataActivity"/>
+        <rdfs:comment>Dealing with data/request using an official procedure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Processing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#RectifyingData -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#RectifyingData">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DataActivity"/>
+        <rdfs:comment>The process of update/fix data attributes.
+
+This class is equivalent to 
+**gdpr:** 
+            [RectifyData](https://w3id.org/GDPRtEXT#RectifyData)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Rectifying</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#RejectionDecision -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#RejectionDecision">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DecisionResult"/>
+        <rdfs:comment>A negative resolution reached after consideration.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Rejection Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#Requests -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#Requests">
+        <rdfs:comment>A request for process on the data.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Requests</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#RestrictingData -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#RestrictingData">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DataActivity"/>
+        <rdfs:comment>The process of restricting the data acesss.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Restricting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#RetentionPeriod -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#RetentionPeriod">
+        <rdfs:comment>The amount of time the continued possession of the document.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Retention Period</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#ReviewingData -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#ReviewingData">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DataActivity"/>
+        <rdfs:comment>Assessing a procedure formally with the intention of instituting change if necessary.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Reviewing</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

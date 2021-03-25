@@ -1,0 +1,215 @@
+<https://www.w3.org/ns/plead> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://www.w3.org/ns/plead> <http://www.w3.org/2002/07/owl#versionIRI> <https://www.w3.org/ns/plead> .
+<https://www.w3.org/ns/plead> <http://www.w3.org/2000/01/rdf-schema#comment> "Vocablary used by the Explanation tool in PLEAD\n\nA visualised Image of Vocablary\n![Plead](Plead.png)" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#resource
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://www.w3.org/ns/plead#AcceptanceDecision
+<https://www.w3.org/ns/plead#AcceptanceDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#AcceptanceDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DecisionResult> .
+<https://www.w3.org/ns/plead#AcceptanceDecision> <http://www.w3.org/2000/01/rdf-schema#comment> "A positive resolution reached after consideration." .
+<https://www.w3.org/ns/plead#AcceptanceDecision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#AcceptanceDecision> <http://www.w3.org/2000/01/rdf-schema#label> "Acceptance Decision" .
+# 
+# https://www.w3.org/ns/plead#ActivityType
+<https://www.w3.org/ns/plead#ActivityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#ActivityType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of process done to reach resolution reached after consideration.\n\nThis class is subclass to \n**prov:** \n            [prov:Activity](http://www.w3.org/ns/prov#Activity)"@en .
+<https://www.w3.org/ns/plead#ActivityType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#ActivityType> <http://www.w3.org/2000/01/rdf-schema#label> "Activity Type" .
+# 
+# https://www.w3.org/ns/plead#AmendingData
+<https://www.w3.org/ns/plead#AmendingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#AmendingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DataActivity> .
+<https://www.w3.org/ns/plead#AmendingData> <http://www.w3.org/2000/01/rdf-schema#comment> "make changes to data in order to make it more accurate." .
+<https://www.w3.org/ns/plead#AmendingData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#AmendingData> <http://www.w3.org/2000/01/rdf-schema#label> "Amending Data" .
+# 
+# https://www.w3.org/ns/plead#AutomatedDecision
+<https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DecisionType> .
+<https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3.org/ns/plead#HumanDecision> .
+<https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/2000/01/rdf-schema#comment> "A resolution reached after an automated consideration." .
+<https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/2000/01/rdf-schema#label> "Automated Decision" .
+# 
+# https://www.w3.org/ns/plead#Data
+<https://www.w3.org/ns/plead#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#Data> <http://www.w3.org/2000/01/rdf-schema#comment> "The data holded on data subject by the current organisation. \n\nThis class is subclass to \n**prov:** \n            [prov:Entity](http://www.w3.org/ns/prov#Entity)\n\nThis class is equivalent to \n**gdpr:** \n       [Data](https://w3id.org/GDPRtEXT#Data)" .
+<https://www.w3.org/ns/plead#Data> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#Data> <http://www.w3.org/2000/01/rdf-schema#label> "Data" .
+# 
+# https://www.w3.org/ns/plead#DataActivity
+<https://www.w3.org/ns/plead#DataActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#DataActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of processes that can by done on data.\n\nThis class is subclass to \n**prov:** \n            [prov:Activity](http://www.w3.org/ns/prov#Activity)" .
+<https://www.w3.org/ns/plead#DataActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#DataActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Data Activity" .
+# 
+# https://www.w3.org/ns/plead#DataController
+<https://www.w3.org/ns/plead#DataController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#DataController> <http://www.w3.org/2000/01/rdf-schema#comment> "The organisation that controls personal data.\n\nThis class is subclass to \n**prov:** \n            [prov:Organization](http://www.w3.org/ns/prov#Organization)\n\nThis class is equivalent to \n**gdpr:** \n            [Controller](https://w3id.org/GDPRtEXT#Controller)" .
+<https://www.w3.org/ns/plead#DataController> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#DataController> <http://www.w3.org/2000/01/rdf-schema#label> "Data Controller" .
+# 
+# https://www.w3.org/ns/plead#DataErasureRequest
+<https://www.w3.org/ns/plead#DataErasureRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#DataErasureRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#Requests> .
+<https://www.w3.org/ns/plead#DataErasureRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "The request to remove data." .
+<https://www.w3.org/ns/plead#DataErasureRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#DataErasureRequest> <http://www.w3.org/2000/01/rdf-schema#label> "Data Erasure Request" .
+# 
+# https://www.w3.org/ns/plead#DataObjectionRequest
+<https://www.w3.org/ns/plead#DataObjectionRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#DataObjectionRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#Requests> .
+<https://www.w3.org/ns/plead#DataObjectionRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "The request to citing a reason against procedure" .
+<https://www.w3.org/ns/plead#DataObjectionRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#DataObjectionRequest> <http://www.w3.org/2000/01/rdf-schema#label> "Data Objection Request" .
+# 
+# https://www.w3.org/ns/plead#DataRectificationRequest
+<https://www.w3.org/ns/plead#DataRectificationRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#DataRectificationRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#Requests> .
+<https://www.w3.org/ns/plead#DataRectificationRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "The request to putting something right." .
+<https://www.w3.org/ns/plead#DataRectificationRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#DataRectificationRequest> <http://www.w3.org/2000/01/rdf-schema#label> "Data Rectify Request" .
+# 
+# https://www.w3.org/ns/plead#DataRestrictionRequest
+<https://www.w3.org/ns/plead#DataRestrictionRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#DataRestrictionRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#Requests> .
+<https://www.w3.org/ns/plead#DataRestrictionRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "The request of restricting the data acesss" .
+<https://www.w3.org/ns/plead#DataRestrictionRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#DataRestrictionRequest> <http://www.w3.org/2000/01/rdf-schema#label> "Data Restrict Request" .
+# 
+# https://www.w3.org/ns/plead#DataReviewRequest
+<https://www.w3.org/ns/plead#DataReviewRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#DataReviewRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#Requests> .
+<https://www.w3.org/ns/plead#DataReviewRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "The request to assessing a procedure formally with the intention of instituting change if necessary." .
+<https://www.w3.org/ns/plead#DataReviewRequest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#DataReviewRequest> <http://www.w3.org/2000/01/rdf-schema#label> "Data Review Request" .
+# 
+# https://www.w3.org/ns/plead#DataSubject
+<https://www.w3.org/ns/plead#DataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#DataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "The data subject is the person with data at the current organisation.\n\nThis class is subclass to \n**prov:** \n            [prov:Agent](http://www.w3.org/ns/prov#Agent)\n\nThis class is equivalent to \n**gdpr:** \n            [DataSubject](https://w3id.org/GDPRtEXT#DataSubject)" .
+<https://www.w3.org/ns/plead#DataSubject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#DataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Data Subject" .
+# 
+# https://www.w3.org/ns/plead#DecisionResult
+<https://www.w3.org/ns/plead#DecisionResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#DecisionResult> <http://www.w3.org/2000/01/rdf-schema#comment> "A resolution reached after consideration.\n\nThis class is subclass to \n**prov:** \n            [prov:Entity](http://www.w3.org/ns/prov#Entity)" .
+<https://www.w3.org/ns/plead#DecisionResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#DecisionResult> <http://www.w3.org/2000/01/rdf-schema#label> "Decision Result" .
+# 
+# https://www.w3.org/ns/plead#DecisionType
+<https://www.w3.org/ns/plead#DecisionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#DecisionType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of process done to reach resolution reached after consideration.\n\nThis class is subclass to \n**prov:** \n            [prov:Entity](http://www.w3.org/ns/prov#Entity)" .
+<https://www.w3.org/ns/plead#DecisionType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#DecisionType> <http://www.w3.org/2000/01/rdf-schema#label> "Decision Type" .
+# 
+# https://www.w3.org/ns/plead#ErasingData
+<https://www.w3.org/ns/plead#ErasingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#ErasingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DataActivity> .
+<https://www.w3.org/ns/plead#ErasingData> <http://www.w3.org/2000/01/rdf-schema#comment> "The process of removing data attributes.\n\nThis class is equivalent to \n**gdpr:** \n            [EraseData](https://w3id.org/GDPRtEXT#EraseData)" .
+<https://www.w3.org/ns/plead#ErasingData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#ErasingData> <http://www.w3.org/2000/01/rdf-schema#label> "Erasing" .
+# 
+# https://www.w3.org/ns/plead#HumanDecision
+<https://www.w3.org/ns/plead#HumanDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#HumanDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DecisionType> .
+<https://www.w3.org/ns/plead#HumanDecision> <http://www.w3.org/2000/01/rdf-schema#comment> "A resolution reached after a human consideration." .
+<https://www.w3.org/ns/plead#HumanDecision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#HumanDecision> <http://www.w3.org/2000/01/rdf-schema#label> "Human Decision" .
+# 
+# https://www.w3.org/ns/plead#HumanLedActivity
+<https://www.w3.org/ns/plead#HumanLedActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#HumanLedActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#ActivityType> .
+<https://www.w3.org/ns/plead#HumanLedActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity that is done by intervention of human." .
+<https://www.w3.org/ns/plead#HumanLedActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#HumanLedActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Human Led Activity" .
+# 
+# https://www.w3.org/ns/plead#MachineLedActivity
+<https://www.w3.org/ns/plead#MachineLedActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#MachineLedActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#ActivityType> .
+<https://www.w3.org/ns/plead#MachineLedActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity that is done using an automated process.\n\nThis class is equivalent to \n**gdpr:** \n       [AutomatedProcessing](https://w3id.org/GDPRtEXT#AutomatedProcessing)" .
+<https://www.w3.org/ns/plead#MachineLedActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#MachineLedActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Machine Led Activity" .
+# 
+# https://www.w3.org/ns/plead#ObjectingData
+<https://www.w3.org/ns/plead#ObjectingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#ObjectingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DataActivity> .
+<https://www.w3.org/ns/plead#ObjectingData> <http://www.w3.org/2000/01/rdf-schema#comment> "Citing a reason against procedure." .
+<https://www.w3.org/ns/plead#ObjectingData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#ObjectingData> <http://www.w3.org/2000/01/rdf-schema#label> "Objecting" .
+# 
+# https://www.w3.org/ns/plead#PrivacyNotice
+<https://www.w3.org/ns/plead#PrivacyNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#PrivacyNotice> <http://www.w3.org/2000/01/rdf-schema#comment> "Document that tells you what to expect us to do with your personal information when you make contact with us or use one of our services.\n\nThis class is subclass to \n**prov:** \n            [prov:Entity](http://www.w3.org/ns/prov#Entity)" .
+<https://www.w3.org/ns/plead#PrivacyNotice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#PrivacyNotice> <http://www.w3.org/2000/01/rdf-schema#label> "Privacy Notice" .
+# 
+# https://www.w3.org/ns/plead#ProcessingData
+<https://www.w3.org/ns/plead#ProcessingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#ProcessingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DataActivity> .
+<https://www.w3.org/ns/plead#ProcessingData> <http://www.w3.org/2000/01/rdf-schema#comment> "Dealing with data/request using an official procedure." .
+<https://www.w3.org/ns/plead#ProcessingData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#ProcessingData> <http://www.w3.org/2000/01/rdf-schema#label> "Processing" .
+# 
+# https://www.w3.org/ns/plead#RectifyingData
+<https://www.w3.org/ns/plead#RectifyingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#RectifyingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DataActivity> .
+<https://www.w3.org/ns/plead#RectifyingData> <http://www.w3.org/2000/01/rdf-schema#comment> "The process of update/fix data attributes.\n\nThis class is equivalent to \n**gdpr:** \n            [RectifyData](https://w3id.org/GDPRtEXT#RectifyData)" .
+<https://www.w3.org/ns/plead#RectifyingData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#RectifyingData> <http://www.w3.org/2000/01/rdf-schema#label> "Rectifying" .
+# 
+# https://www.w3.org/ns/plead#RejectionDecision
+<https://www.w3.org/ns/plead#RejectionDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#RejectionDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DecisionResult> .
+<https://www.w3.org/ns/plead#RejectionDecision> <http://www.w3.org/2000/01/rdf-schema#comment> "A negative resolution reached after consideration." .
+<https://www.w3.org/ns/plead#RejectionDecision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#RejectionDecision> <http://www.w3.org/2000/01/rdf-schema#label> "Rejection Decision" .
+# 
+# https://www.w3.org/ns/plead#Requests
+<https://www.w3.org/ns/plead#Requests> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#Requests> <http://www.w3.org/2000/01/rdf-schema#comment> "A request for process on the data.\n\nThis class is subclass to \n**prov:** \n            [prov:Entity](http://www.w3.org/ns/prov#Entity)" .
+<https://www.w3.org/ns/plead#Requests> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#Requests> <http://www.w3.org/2000/01/rdf-schema#label> "Requests" .
+# 
+# https://www.w3.org/ns/plead#RestrictingData
+<https://www.w3.org/ns/plead#RestrictingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#RestrictingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DataActivity> .
+<https://www.w3.org/ns/plead#RestrictingData> <http://www.w3.org/2000/01/rdf-schema#comment> "The process of restricting the data acesss." .
+<https://www.w3.org/ns/plead#RestrictingData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#RestrictingData> <http://www.w3.org/2000/01/rdf-schema#label> "Restricting" .
+# 
+# https://www.w3.org/ns/plead#RetentionPeriod
+<https://www.w3.org/ns/plead#RetentionPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#RetentionPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of time the continued possession of the document.\n\nThis class is subclass to \n**prov:** \n            [prov:Entity](http://www.w3.org/ns/prov#Entity)" .
+<https://www.w3.org/ns/plead#RetentionPeriod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#RetentionPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "Retention Period" .
+# 
+# https://www.w3.org/ns/plead#ReviewingData
+<https://www.w3.org/ns/plead#ReviewingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#ReviewingData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DataActivity> .
+<https://www.w3.org/ns/plead#ReviewingData> <http://www.w3.org/2000/01/rdf-schema#comment> "Assessing a procedure formally with the intention of instituting change if necessary." .
+<https://www.w3.org/ns/plead#ReviewingData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#ReviewingData> <http://www.w3.org/2000/01/rdf-schema#label> "Reviewing" .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
