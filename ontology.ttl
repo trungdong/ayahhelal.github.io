@@ -37,15 +37,15 @@ rdf:type rdf:type owl:AnnotationProperty .
                     rdfs:label "Acceptance Decision" .
 
 
-###  https://www.w3.org/ns/plead#ActivityType
-:ActivityType rdf:type owl:Class ;
-              rdfs:comment """The type of process done to reach resolution reached after consideration.
+###  https://www.w3.org/ns/plead#Activity
+:Activity rdf:type owl:Class ;
+          rdfs:comment """The type of process done to reach resolution reached after consideration.
 
-This class is subclass to 
+This class is equivalent to 
 **prov:** 
             [prov:Activity](http://www.w3.org/ns/prov#Activity)"""@en ;
-              rdfs:isDefinedBy : ;
-              rdfs:label "Activity Type" .
+          rdfs:isDefinedBy : ;
+          rdfs:label "Activity Type" .
 
 
 ###  https://www.w3.org/ns/plead#AmendingData
@@ -213,7 +213,7 @@ This class is equivalent to
 
 ###  https://www.w3.org/ns/plead#HumanLedActivity
 :HumanLedActivity rdf:type owl:Class ;
-                  rdfs:subClassOf :ActivityType ;
+                  rdfs:subClassOf :Activity ;
                   rdfs:comment "An activity that is done by intervention of human." ;
                   rdfs:isDefinedBy : ;
                   rdfs:label "Human Led Activity" .
@@ -221,7 +221,7 @@ This class is equivalent to
 
 ###  https://www.w3.org/ns/plead#MachineLedActivity
 :MachineLedActivity rdf:type owl:Class ;
-                    rdfs:subClassOf :ActivityType ;
+                    rdfs:subClassOf :Activity ;
                     rdfs:comment """An activity that is done using an automated process.
 
 This class is equivalent to 

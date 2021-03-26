@@ -66,13 +66,13 @@ A visualised Image of Vocablary
     
 
 
-    <!-- https://www.w3.org/ns/plead#ActivityType -->
+    <!-- https://www.w3.org/ns/plead#Activity -->
 
 
-    <owl:Class rdf:about="https://www.w3.org/ns/plead#ActivityType">
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#Activity">
         <rdfs:comment xml:lang="en">The type of process done to reach resolution reached after consideration.
 
-This class is subclass to 
+This class is equivalent to 
 **prov:** 
             [prov:Activity](http://www.w3.org/ns/prov#Activity)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
@@ -312,7 +312,7 @@ This class is equivalent to
 
 
     <owl:Class rdf:about="https://www.w3.org/ns/plead#HumanLedActivity">
-        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#ActivityType"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#Activity"/>
         <rdfs:comment>An activity that is done by intervention of human.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
         <rdfs:label>Human Led Activity</rdfs:label>
@@ -324,7 +324,7 @@ This class is equivalent to
 
 
     <owl:Class rdf:about="https://www.w3.org/ns/plead#MachineLedActivity">
-        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#ActivityType"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#Activity"/>
         <rdfs:comment>An activity that is done using an automated process.
 
 This class is equivalent to 

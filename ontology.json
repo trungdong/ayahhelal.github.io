@@ -29,11 +29,11 @@
     "@id" : "https://www.w3.org/ns/plead#DecisionResult"
   } ]
 }, {
-  "@id" : "https://www.w3.org/ns/plead#ActivityType",
+  "@id" : "https://www.w3.org/ns/plead#Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The type of process done to reach resolution reached after consideration.\n\nThis class is subclass to \n**prov:** \n            [prov:Activity](http://www.w3.org/ns/prov#Activity)"
+    "@value" : "The type of process done to reach resolution reached after consideration.\n\nThis class is equivalent to \n**prov:** \n            [prov:Activity](http://www.w3.org/ns/prov#Activity)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://www.w3.org/ns/plead#"
@@ -279,7 +279,7 @@
     "@value" : "Human Led Activity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/plead#ActivityType"
+    "@id" : "https://www.w3.org/ns/plead#Activity"
   } ]
 }, {
   "@id" : "https://www.w3.org/ns/plead#MachineLedActivity",
@@ -294,7 +294,7 @@
     "@value" : "Machine Led Activity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/plead#ActivityType"
+    "@id" : "https://www.w3.org/ns/plead#Activity"
   } ]
 }, {
   "@id" : "https://www.w3.org/ns/plead#ObjectingData",

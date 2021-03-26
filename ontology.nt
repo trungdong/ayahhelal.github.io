@@ -32,11 +32,11 @@
 <https://www.w3.org/ns/plead#AcceptanceDecision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
 <https://www.w3.org/ns/plead#AcceptanceDecision> <http://www.w3.org/2000/01/rdf-schema#label> "Acceptance Decision" .
 # 
-# https://www.w3.org/ns/plead#ActivityType
-<https://www.w3.org/ns/plead#ActivityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://www.w3.org/ns/plead#ActivityType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of process done to reach resolution reached after consideration.\n\nThis class is subclass to \n**prov:** \n            [prov:Activity](http://www.w3.org/ns/prov#Activity)"@en .
-<https://www.w3.org/ns/plead#ActivityType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
-<https://www.w3.org/ns/plead#ActivityType> <http://www.w3.org/2000/01/rdf-schema#label> "Activity Type" .
+# https://www.w3.org/ns/plead#Activity
+<https://www.w3.org/ns/plead#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#Activity> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of process done to reach resolution reached after consideration.\n\nThis class is equivalent to \n**prov:** \n            [prov:Activity](http://www.w3.org/ns/prov#Activity)"@en .
+<https://www.w3.org/ns/plead#Activity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Activity Type" .
 # 
 # https://www.w3.org/ns/plead#AmendingData
 <https://www.w3.org/ns/plead#AmendingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -147,14 +147,14 @@
 # 
 # https://www.w3.org/ns/plead#HumanLedActivity
 <https://www.w3.org/ns/plead#HumanLedActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://www.w3.org/ns/plead#HumanLedActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#ActivityType> .
+<https://www.w3.org/ns/plead#HumanLedActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#Activity> .
 <https://www.w3.org/ns/plead#HumanLedActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity that is done by intervention of human." .
 <https://www.w3.org/ns/plead#HumanLedActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
 <https://www.w3.org/ns/plead#HumanLedActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Human Led Activity" .
 # 
 # https://www.w3.org/ns/plead#MachineLedActivity
 <https://www.w3.org/ns/plead#MachineLedActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://www.w3.org/ns/plead#MachineLedActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#ActivityType> .
+<https://www.w3.org/ns/plead#MachineLedActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#Activity> .
 <https://www.w3.org/ns/plead#MachineLedActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity that is done using an automated process.\n\nThis class is equivalent to \n**gdpr:** \n       [AutomatedProcessing](https://w3id.org/GDPRtEXT#AutomatedProcessing)" .
 <https://www.w3.org/ns/plead#MachineLedActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
 <https://www.w3.org/ns/plead#MachineLedActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Machine Led Activity" .
