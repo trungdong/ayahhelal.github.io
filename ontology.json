@@ -39,7 +39,7 @@
     "@id" : "https://www.w3.org/ns/plead#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Activity Type"
+    "@value" : "Activity"
   } ]
 }, {
   "@id" : "https://www.w3.org/ns/plead#AmendingData",

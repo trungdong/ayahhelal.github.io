@@ -45,7 +45,7 @@ This class is equivalent to
 **prov:** 
             [prov:Activity](http://www.w3.org/ns/prov#Activity)"""@en ;
           rdfs:isDefinedBy : ;
-          rdfs:label "Activity Type" .
+          rdfs:label "Activity" .
 
 
 ###  https://www.w3.org/ns/plead#AmendingData
