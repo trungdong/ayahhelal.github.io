@@ -45,13 +45,16 @@ This section provides details for each class and property defined by Plead.
          <a href="#DataSubject" title="https://www.w3.org/ns/plead#DataSubject">Data Subject</a>
       </li>
       <li>
+         <a href="#Decision" title="https://www.w3.org/ns/plead#Decision">Decision</a>
+      </li>
+      <li>
          <a href="#DecisionResult" title="https://www.w3.org/ns/plead#DecisionResult">Decision Result</a>
       </li>
       <li>
-         <a href="#DecisionType" title="https://www.w3.org/ns/plead#DecisionType">Decision Type</a>
+         <a href="#ErasingData" title="https://www.w3.org/ns/plead#ErasingData">Erasing</a>
       </li>
       <li>
-         <a href="#ErasingData" title="https://www.w3.org/ns/plead#ErasingData">Erasing</a>
+         <a href="#ExternalData" title="https://www.w3.org/ns/plead#ExternalData">External Data</a>
       </li>
       <li>
          <a href="#HumanDecision" title="https://www.w3.org/ns/plead#HumanDecision">Human Decision</a>
@@ -88,6 +91,9 @@ This section provides details for each class and property defined by Plead.
       </li>
       <li>
          <a href="#ReviewingData" title="https://www.w3.org/ns/plead#ReviewingData">Reviewing</a>
+      </li>
+      <li>
+         <a href="#SubjectData" title="https://www.w3.org/ns/plead#SubjectData">Subject Data</a>
       </li>
    </ul>
    <div class="entity" id="AcceptanceDecision">
@@ -186,7 +192,7 @@ This class is subclass to
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DecisionType" title="https://www.w3.org/ns/plead#DecisionType">Decision Type</a>
+            <a href="#Decision" title="https://www.w3.org/ns/plead#Decision">Decision</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -218,6 +224,14 @@ This class is equivalent to
          <dt>Is defined by</dt>
          <dd>
             <a href="https://www.w3.org/ns/plead#">https://www.w3.org/ns/plead#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ExternalData" title="https://www.w3.org/ns/plead#ExternalData">External Data</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#SubjectData" title="https://www.w3.org/ns/plead#SubjectData">Subject Data</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -425,6 +439,35 @@ This class is equivalent to
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Decision">
+      <h3>Decision<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3.org/ns/plead#Decision</p>
+      <div class="comment">
+         <span class="markdown">The type of process done to reach resolution reached after consideration.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.w3.org/ns/plead#">https://www.w3.org/ns/plead#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AutomatedDecision" title="https://www.w3.org/ns/plead#AutomatedDecision">Automated Decision</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HumanDecision" title="https://www.w3.org/ns/plead#HumanDecision">Human Decision</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="DecisionResult">
       <h3>Decision Result<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -450,35 +493,6 @@ This class is subclass to
          <dd>
             <a href="#AcceptanceDecision" title="https://www.w3.org/ns/plead#AcceptanceDecision">Acceptance Decision</a>
             <sup class="type-c" title="class">c</sup>, <a href="#RejectionDecision" title="https://www.w3.org/ns/plead#RejectionDecision">Rejection Decision</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="DecisionType">
-      <h3>Decision Type<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://www.w3.org/ns/plead#DecisionType</p>
-      <div class="comment">
-         <span class="markdown">The type of process done to reach resolution reached after consideration.
-
-This class is subclass to 
-**prov:** 
-            [prov:Entity](http://www.w3.org/ns/prov#Entity)</span>
-      </div>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="https://www.w3.org/ns/plead#">https://www.w3.org/ns/plead#</a>
-         </dd>
-      </dl>
-      <dl class="description">
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#AutomatedDecision" title="https://www.w3.org/ns/plead#AutomatedDecision">Automated Decision</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HumanDecision" title="https://www.w3.org/ns/plead#HumanDecision">Human Decision</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -511,6 +525,30 @@ This class is equivalent to
          </dd>
       </dl>
    </div>
+   <div class="entity" id="ExternalData">
+      <h3>External Data<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3.org/ns/plead#ExternalData</p>
+      <div class="comment">
+         <span class="markdown">Data belonging to a DataSubject and under the control of the DataController.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.w3.org/ns/plead#">https://www.w3.org/ns/plead#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Data" title="https://www.w3.org/ns/plead#Data">Data</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="HumanDecision">
       <h3>Human Decision<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -530,7 +568,7 @@ This class is equivalent to
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DecisionType" title="https://www.w3.org/ns/plead#DecisionType">Decision Type</a>
+            <a href="#Decision" title="https://www.w3.org/ns/plead#Decision">Decision</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -812,6 +850,30 @@ This class is subclass to
          <dt>has super-classes</dt>
          <dd>
             <a href="#DataActivity" title="https://www.w3.org/ns/plead#DataActivity">Data Activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SubjectData">
+      <h3>Subject Data<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://www.w3.org/ns/plead#SubjectData</p>
+      <div class="comment">
+         <span class="markdown">Data provided to a DataController from a third party (that is not the Data Subject)</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://www.w3.org/ns/plead#">https://www.w3.org/ns/plead#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Data" title="https://www.w3.org/ns/plead#Data">Data</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

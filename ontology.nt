@@ -47,7 +47,7 @@
 # 
 # https://www.w3.org/ns/plead#AutomatedDecision
 <https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DecisionType> .
+<https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#Decision> .
 <https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/2002/07/owl#disjointWith> <https://www.w3.org/ns/plead#HumanDecision> .
 <https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/2000/01/rdf-schema#comment> "A resolution reached after an automated consideration." .
 <https://www.w3.org/ns/plead#AutomatedDecision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
@@ -112,17 +112,17 @@
 <https://www.w3.org/ns/plead#DataSubject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
 <https://www.w3.org/ns/plead#DataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Data Subject" .
 # 
+# https://www.w3.org/ns/plead#Decision
+<https://www.w3.org/ns/plead#Decision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#Decision> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of process done to reach resolution reached after consideration.\n\nThis class is subclass to \n**prov:** \n            [prov:Entity](http://www.w3.org/ns/prov#Entity)" .
+<https://www.w3.org/ns/plead#Decision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#Decision> <http://www.w3.org/2000/01/rdf-schema#label> "Decision" .
+# 
 # https://www.w3.org/ns/plead#DecisionResult
 <https://www.w3.org/ns/plead#DecisionResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.w3.org/ns/plead#DecisionResult> <http://www.w3.org/2000/01/rdf-schema#comment> "A resolution reached after consideration.\n\nThis class is subclass to \n**prov:** \n            [prov:Entity](http://www.w3.org/ns/prov#Entity)" .
 <https://www.w3.org/ns/plead#DecisionResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
 <https://www.w3.org/ns/plead#DecisionResult> <http://www.w3.org/2000/01/rdf-schema#label> "Decision Result" .
-# 
-# https://www.w3.org/ns/plead#DecisionType
-<https://www.w3.org/ns/plead#DecisionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://www.w3.org/ns/plead#DecisionType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of process done to reach resolution reached after consideration.\n\nThis class is subclass to \n**prov:** \n            [prov:Entity](http://www.w3.org/ns/prov#Entity)" .
-<https://www.w3.org/ns/plead#DecisionType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
-<https://www.w3.org/ns/plead#DecisionType> <http://www.w3.org/2000/01/rdf-schema#label> "Decision Type" .
 # 
 # https://www.w3.org/ns/plead#ErasingData
 <https://www.w3.org/ns/plead#ErasingData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -131,9 +131,16 @@
 <https://www.w3.org/ns/plead#ErasingData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
 <https://www.w3.org/ns/plead#ErasingData> <http://www.w3.org/2000/01/rdf-schema#label> "Erasing" .
 # 
+# https://www.w3.org/ns/plead#ExternalData
+<https://www.w3.org/ns/plead#ExternalData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#ExternalData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#Data> .
+<https://www.w3.org/ns/plead#ExternalData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data belonging to a DataSubject and under the control of the DataController." .
+<https://www.w3.org/ns/plead#ExternalData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#ExternalData> <http://www.w3.org/2000/01/rdf-schema#label> "External Data" .
+# 
 # https://www.w3.org/ns/plead#HumanDecision
 <https://www.w3.org/ns/plead#HumanDecision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://www.w3.org/ns/plead#HumanDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#DecisionType> .
+<https://www.w3.org/ns/plead#HumanDecision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#Decision> .
 <https://www.w3.org/ns/plead#HumanDecision> <http://www.w3.org/2000/01/rdf-schema#comment> "A resolution reached after a human consideration." .
 <https://www.w3.org/ns/plead#HumanDecision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
 <https://www.w3.org/ns/plead#HumanDecision> <http://www.w3.org/2000/01/rdf-schema#label> "Human Decision" .
@@ -211,5 +218,12 @@
 <https://www.w3.org/ns/plead#ReviewingData> <http://www.w3.org/2000/01/rdf-schema#comment> "Assessing a procedure formally with the intention of instituting change if necessary." .
 <https://www.w3.org/ns/plead#ReviewingData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
 <https://www.w3.org/ns/plead#ReviewingData> <http://www.w3.org/2000/01/rdf-schema#label> "Reviewing" .
+# 
+# https://www.w3.org/ns/plead#SubjectData
+<https://www.w3.org/ns/plead#SubjectData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://www.w3.org/ns/plead#SubjectData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/plead#Data> .
+<https://www.w3.org/ns/plead#SubjectData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data provided to a DataController from a third party (that is not the Data Subject)" .
+<https://www.w3.org/ns/plead#SubjectData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/ns/plead#> .
+<https://www.w3.org/ns/plead#SubjectData> <http://www.w3.org/2000/01/rdf-schema#label> "Subject Data" .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

@@ -97,7 +97,7 @@ This class is subclass to
 
 
     <owl:Class rdf:about="https://www.w3.org/ns/plead#AutomatedDecision">
-        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DecisionType"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#Decision"/>
         <owl:disjointWith rdf:resource="https://www.w3.org/ns/plead#HumanDecision"/>
         <rdfs:comment>A resolution reached after an automated consideration.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
@@ -238,6 +238,21 @@ This class is equivalent to
     
 
 
+    <!-- https://www.w3.org/ns/plead#Decision -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#Decision">
+        <rdfs:comment>The type of process done to reach resolution reached after consideration.
+
+This class is subclass to 
+**prov:** 
+            [prov:Entity](http://www.w3.org/ns/prov#Entity)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Decision</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://www.w3.org/ns/plead#DecisionResult -->
 
 
@@ -249,21 +264,6 @@ This class is subclass to
             [prov:Entity](http://www.w3.org/ns/prov#Entity)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
         <rdfs:label>Decision Result</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://www.w3.org/ns/plead#DecisionType -->
-
-
-    <owl:Class rdf:about="https://www.w3.org/ns/plead#DecisionType">
-        <rdfs:comment>The type of process done to reach resolution reached after consideration.
-
-This class is subclass to 
-**prov:** 
-            [prov:Entity](http://www.w3.org/ns/prov#Entity)</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
-        <rdfs:label>Decision Type</rdfs:label>
     </owl:Class>
     
 
@@ -284,11 +284,23 @@ This class is equivalent to
     
 
 
+    <!-- https://www.w3.org/ns/plead#ExternalData -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#ExternalData">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#Data"/>
+        <rdfs:comment>Data belonging to a DataSubject and under the control of the DataController.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>External Data</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://www.w3.org/ns/plead#HumanDecision -->
 
 
     <owl:Class rdf:about="https://www.w3.org/ns/plead#HumanDecision">
-        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#DecisionType"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#Decision"/>
         <rdfs:comment>A resolution reached after a human consideration.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
         <rdfs:label>Human Decision</rdfs:label>
@@ -441,6 +453,18 @@ This class is subclass to
         <rdfs:comment>Assessing a procedure formally with the intention of instituting change if necessary.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
         <rdfs:label>Reviewing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/plead#SubjectData -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/plead#SubjectData">
+        <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/plead#Data"/>
+        <rdfs:comment>Data provided to a DataController from a third party (that is not the Data Subject)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/ns/plead#"/>
+        <rdfs:label>Subject Data</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

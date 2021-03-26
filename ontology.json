@@ -69,7 +69,7 @@
     "@value" : "Automated Decision"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/plead#DecisionType"
+    "@id" : "https://www.w3.org/ns/plead#Decision"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://www.w3.org/ns/plead#HumanDecision"
@@ -198,6 +198,18 @@
     "@value" : "Data Subject"
   } ]
 }, {
+  "@id" : "https://www.w3.org/ns/plead#Decision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The type of process done to reach resolution reached after consideration.\n\nThis class is subclass to \n**prov:** \n            [prov:Entity](http://www.w3.org/ns/prov#Entity)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://www.w3.org/ns/plead#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Decision"
+  } ]
+}, {
   "@id" : "https://www.w3.org/ns/plead#DecisionResult",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -208,18 +220,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Decision Result"
-  } ]
-}, {
-  "@id" : "https://www.w3.org/ns/plead#DecisionType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The type of process done to reach resolution reached after consideration.\n\nThis class is subclass to \n**prov:** \n            [prov:Entity](http://www.w3.org/ns/prov#Entity)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://www.w3.org/ns/plead#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Decision Type"
   } ]
 }, {
   "@id" : "https://www.w3.org/ns/plead#ErasingData",
@@ -237,6 +237,21 @@
     "@id" : "https://www.w3.org/ns/plead#DataActivity"
   } ]
 }, {
+  "@id" : "https://www.w3.org/ns/plead#ExternalData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Data belonging to a DataSubject and under the control of the DataController."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://www.w3.org/ns/plead#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "External Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3.org/ns/plead#Data"
+  } ]
+}, {
   "@id" : "https://www.w3.org/ns/plead#HumanDecision",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -249,7 +264,7 @@
     "@value" : "Human Decision"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://www.w3.org/ns/plead#DecisionType"
+    "@id" : "https://www.w3.org/ns/plead#Decision"
   } ]
 }, {
   "@id" : "https://www.w3.org/ns/plead#HumanLedActivity",
@@ -406,5 +421,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3.org/ns/plead#DataActivity"
+  } ]
+}, {
+  "@id" : "https://www.w3.org/ns/plead#SubjectData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Data provided to a DataController from a third party (that is not the Data Subject)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://www.w3.org/ns/plead#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Subject Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://www.w3.org/ns/plead#Data"
   } ]
 } ]
